@@ -1,5 +1,8 @@
 [name] New design 1
 [puzzle] Sz005
+[production-cost] 800
+[power-usage] 528
+[lines-of-code] 13
 
 [traces] 
 ......................
@@ -8,37 +11,62 @@
 ......................
 ......................
 ......................
+.........154.154......
+.........154..........
+....8........154......
+....A........15554....
+....35555554.154......
 ......................
 ......................
 ......................
-......................
-......................
-......................
-......................
-......................
-
-[chip] 
-[type] DIAL2
-[x] 4
-[y] 2
-[is-puzzle-provided] true
-
-[chip] 
-[type] DIAL1
-[x] 4
-[y] 3
-[is-puzzle-provided] true
 
 [chip] 
 [type] UC4
 [x] 11
-[y] 4
+[y] 3
 [code] 
+  slx x1
+  mov x1 acc
+  tgt p0 19
++ mov acc p1
+- mov 0 p1
 
+[chip] 
+[type] BRIDGE
+[x] 15
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 5
+[code] 
+  teq p1 x0
++ not
+  teq p1 x1
++ not
++ mov acc x2
+  
+  teq acc 100
++ mov acc x2
+  slp 1
+
+[chip] 
+[type] DIAL2
+[x] 8
+[y] 6
+[is-puzzle-provided] true
 
 [chip] 
 [type] RTC
-[x] 4
+[x] 15
+[y] 6
+[rotated] true
+[is-puzzle-provided] true
+
+[chip] 
+[type] DIAL1
+[x] 8
 [y] 7
 [is-puzzle-provided] true
 
