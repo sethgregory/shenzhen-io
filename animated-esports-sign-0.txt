@@ -1,0 +1,70 @@
+[name] New design 1
+[puzzle] Sz001
+[production-cost] 1200
+[power-usage] 331
+[lines-of-code] 24
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+...........9554.......
+...........A..........
+........1C.A954.......
+.....94..A.AA.........
+.....34.16.2214.......
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 2
+[code] 
+  mov 0 p0
+  slp 7
+  mov 100 p0
+  slp 2
+  mov 0 p0
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 6
+[y] 3
+[code] 
+  mov acc p1
+  add 100
+  tgt acc 101
++ mov 0 acc
+  mov acc p0
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 4
+[code] 
+  mov 0 p0
+  slp 6
+  mov 100 p0
+  slp 1
+  mov 0 p0
+  slp 2
+  mov 100 p0
+  slp 1
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 6
+[code] 
+  mov 100 p0
+  slp 6
+  mov 0 p0
+  slp 4
+
